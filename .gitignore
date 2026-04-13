@@ -26,3 +26,7 @@ logs
 .history
 node_modules
 .output
+
+package-lock.json
+.env
+.env.*
