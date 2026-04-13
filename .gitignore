@@ -24,9 +24,6 @@ logs
 !.env.example
 
 .history
-node_modules
-.output
 
+# Lock file
 package-lock.json
-.env
-.env.*
