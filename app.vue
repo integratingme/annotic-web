@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { onMounted } from "vue";
-import { useTheme } from "@/composables/useTheme";
+import { useTheme } from "./composables/useTheme";
 import Navbar from "./components/Navbar.vue";
 import Hero from "./components/Hero.vue";
 import Features from "./components/Features.vue";
@@ -9,9 +8,9 @@ import Footer from "./components/Footer.vue";
 
 const { initTheme } = useTheme();
 
-onMounted(() => {
+if (import.meta.client) {
   initTheme();
-});
+}
 </script>
 
 <template>

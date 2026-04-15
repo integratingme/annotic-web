@@ -3,7 +3,11 @@ import { onMounted, ref } from "vue";
 import { useTheme } from "@/composables/useTheme";
 
 const { toggleTheme } = useTheme();
-const isDark = ref(false);
+const isDark = ref(
+  import.meta.client
+    ? document.documentElement.classList.contains("dark")
+    : false,
+);
 
 const syncThemeIcon = () => {
   isDark.value = document.documentElement.classList.contains("dark");
@@ -64,23 +68,9 @@ onMounted(() => {
           :aria-label="isDark ? 'Switch to light mode' : 'Switch to dark mode'"
           class="h-9 w-9 rounded-lg border-0 ring-0 outline-none shadow-none focus:outline-none focus:ring-0 appearance-none grid place-items-center text-slate-700 dark:text-slate-200 hover:bg-gray-200 dark:hover:bg-gray-800 transition"
         >
-          <!-- Moon Icon (shown in dark mode) -->
+          <!-- Sun Icon (shown in dark mode) -->
           <svg
             v-if="isDark"
-            class="w-5 h-5"
-            fill="none"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="1.8"
-            viewBox="0 0 24 24"
-          >
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z" />
-          </svg>
-
-          <!-- Sun Icon (shown in light mode) -->
-          <svg
-            v-else
             class="w-5 h-5"
             fill="none"
             stroke="currentColor"
@@ -98,6 +88,20 @@ onMounted(() => {
             <line x1="21" y1="12" x2="23" y2="12" />
             <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
             <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+          </svg>
+
+          <!-- Moon Icon (shown in light mode) -->
+          <svg
+            v-else
+            class="w-5 h-5"
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.8"
+            viewBox="0 0 24 24"
+          >
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z" />
           </svg>
         </button>
 
