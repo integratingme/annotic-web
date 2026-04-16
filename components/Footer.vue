@@ -1,38 +1,32 @@
+<script setup lang="ts">
+import PreviewDemo from "./PreviewDemo.vue";
+</script>
+
 <template>
   <div class="bg-white dark:bg-slate-950 transition-colors duration-200">
     <section
-      class="py-20 px-6 bg-white dark:bg-slate-950 transition-colors duration-200"
+      class="pt-24 pb-20 px-6 bg-white dark:bg-slate-950 transition-colors duration-200"
     >
       <div class="max-w-7xl mx-auto">
-        <div class="text-center mb-14">
+        <div class="text-center">
           <h2
-            class="text-5xl font-extrabold tracking-tight text-black dark:text-white transition-colors duration-200"
+            class="text-4xl md:text-5xl font-semibold text-center mb-4 text-black dark:text-white"
           >
             See It in
             <span
-              class="bg-gradient-to-r from-violet-400 to-blue-400 bg-clip-text text-transparent"
+              class="bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent"
               >Action</span
             >
           </h2>
           <p
-            class="mt-4 text-slate-600 dark:text-slate-400 text-xl transition-colors duration-200"
+            class="text-gray-500 text-center text-base max-w-2xl mx-auto mb-12"
           >
             A clean, powerful interface designed for speed and accuracy.
           </p>
         </div>
 
-        <div
-          class="max-w-[1040px] mx-auto rounded-3xl overflow-hidden border border-slate-300 dark:border-slate-700/60 bg-slate-100 dark:bg-gradient-to-b dark:from-slate-900 dark:to-slate-950 dark:shadow-[0_0_120px_rgba(79,70,229,0.34)] transition-colors duration-200"
-        >
-          <div
-            class="h-[420px] bg-slate-100 dark:bg-slate-950 grid place-items-center transition-colors duration-200"
-          >
-            <p
-              class="text-slate-400 dark:text-slate-500 transition-colors duration-200"
-            >
-              Interface Preview
-            </p>
-          </div>
+        <div class="mt-12">
+          <PreviewDemo />
         </div>
       </div>
     </section>
@@ -396,11 +390,14 @@
     </section>
 
     <section
-      class="px-6 py-16 bg-[radial-gradient(ellipse_at_center,rgba(99,102,241,0.10)_0%,rgba(241,245,249,1)_52%)] dark:bg-[linear-gradient(180deg,#090f22_0%,#070c1d_100%)] transition-colors duration-200"
+      class="relative overflow-hidden px-6 py-16 bg-gradient-to-br from-purple-50 via-white to-blue-50 dark:bg-[linear-gradient(180deg,#090f22_0%,#070c1d_100%)] transition-colors duration-200"
     >
+      <div
+        class="pointer-events-none absolute inset-0 dark:hidden bg-[radial-gradient(circle_at_center,rgba(168,85,247,0.15),transparent_70%)]"
+      ></div>
       <div class="max-w-[900px] mx-auto">
         <div
-          class="rounded-3xl border border-slate-200 bg-slate-100 shadow-sm px-8 py-14 sm:px-14 sm:py-16 text-center dark:border-indigo-500/15 dark:bg-[linear-gradient(180deg,#101938_0%,#0b1430_100%)] dark:shadow-[0_0_80px_rgba(124,58,237,0.35)]"
+          class="rounded-3xl border border-gray-200 bg-white shadow-sm px-8 py-14 sm:px-14 sm:py-16 text-center"
         >
           <h3
             class="text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white"

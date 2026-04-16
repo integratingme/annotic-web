@@ -31,7 +31,7 @@
             class="relative w-16 h-16 mx-auto rounded-2xl border border-slate-300 bg-slate-100 shadow-[0_8px_20px_rgba(15,23,42,0.08)] flex items-center justify-center dark:bg-[#0B1120] dark:border-gray-800 dark:shadow-[0_0_20px_rgba(34,211,238,0.15)] transition-colors duration-200"
           >
             <svg
-              class="w-7 h-7 text-cyan-500 dark:text-cyan-400"
+              class="w-7 h-7 text-cyan-400"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
@@ -65,11 +65,11 @@
             class="relative w-16 h-16 mx-auto rounded-2xl border border-slate-300 bg-slate-100 shadow-[0_8px_20px_rgba(15,23,42,0.08)] flex items-center justify-center dark:bg-[#0B1120] dark:border-gray-800 dark:shadow-[0_0_20px_rgba(34,211,238,0.15)] transition-colors duration-200"
           >
             <svg
-              class="w-6 h-6 text-cyan-400"
+              class="w-7 h-7 text-cyan-400"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
-              stroke-width="1.9"
+              stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
             >
@@ -100,11 +100,11 @@
             class="relative w-16 h-16 mx-auto rounded-2xl border border-slate-300 bg-slate-100 shadow-[0_8px_20px_rgba(15,23,42,0.08)] flex items-center justify-center dark:bg-[#0B1120] dark:border-gray-800 dark:shadow-[0_0_20px_rgba(34,211,238,0.15)] transition-colors duration-200"
           >
             <svg
-              class="w-7 h-7 text-cyan-500 dark:text-cyan-400"
+              class="w-7 h-7 text-cyan-400"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
-              stroke-width="2.4"
+              stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
             >
@@ -139,11 +139,11 @@
             class="relative w-16 h-16 mx-auto rounded-2xl border border-slate-300 bg-slate-100 shadow-[0_8px_20px_rgba(15,23,42,0.08)] flex items-center justify-center dark:bg-[#0B1120] dark:border-gray-800 dark:shadow-[0_0_20px_rgba(34,211,238,0.15)] transition-colors duration-200"
           >
             <svg
-              class="w-7 h-7 text-cyan-500 dark:text-cyan-400"
+              class="w-7 h-7 text-cyan-400"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
-              stroke-width="2.4"
+              stroke-width="2"
               stroke-linecap="round"
               stroke-linejoin="round"
             >

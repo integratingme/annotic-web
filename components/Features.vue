@@ -1,76 +1,220 @@
 <template>
   <div class="bg-white dark:bg-slate-950 transition-colors duration-200">
-    <section class="py-20 px-6">
-      <div class="max-w-7xl mx-auto">
+    <section
+      class="py-24 px-6 [font-family:Inter,ui-sans-serif,system-ui,sans-serif]"
+    >
+      <div class="max-w-6xl mx-auto">
         <div class="text-center mb-14">
           <h2
-            class="text-5xl font-extrabold tracking-tight text-black dark:text-white transition-colors duration-200"
+            class="text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white transition-colors duration-200"
           >
             The Problem with
             <span
-              class="bg-gradient-to-r from-violet-400 to-blue-400 bg-clip-text text-transparent"
+              class="bg-gradient-to-r from-violet-500 via-indigo-500 to-cyan-400 bg-clip-text text-transparent"
               >Traditional Annotation</span
             >
           </h2>
           <p
-            class="mt-4 text-slate-600 dark:text-slate-400 text-xl transition-colors duration-200"
+            class="mt-5 text-base text-slate-500 dark:text-slate-400 leading-7 transition-colors duration-200"
           >
             See how Annotic transforms the annotation workflow.
           </p>
         </div>
 
-        <div class="grid md:grid-cols-2 gap-8">
-          <div
-            class="rounded-2xl border border-red-200 dark:border-red-500/20 bg-red-50 dark:bg-slate-900/60 p-8 transition-colors duration-200"
+        <div class="grid grid-cols-2 gap-8">
+          <article
+            class="rounded-2xl border border-slate-200 bg-[#f9fafb] p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-violet-300 hover:shadow-[0_16px_38px_rgba(139,92,246,0.18)] dark:border-slate-800 dark:bg-slate-900/60 dark:hover:border-violet-500/40 dark:hover:shadow-[0_18px_44px_rgba(139,92,246,0.22)]"
           >
-            <h3
-              class="text-3xl font-bold mb-8 text-black dark:text-white transition-colors duration-200"
-            >
-              Without Annotic
-            </h3>
-            <ul
-              class="space-y-6 text-slate-700 dark:text-slate-300 text-2xl transition-colors duration-200"
-            >
-              <li class="flex gap-4">
-                <span class="text-red-500 dark:text-red-400">✕</span
-                ><span>Manual annotation is painfully slow</span>
-              </li>
-              <li class="flex gap-4">
-                <span class="text-red-500 dark:text-red-400">✕</span
-                ><span>Repetitive tasks drain productivity</span>
-              </li>
-              <li class="flex gap-4">
-                <span class="text-red-500 dark:text-red-400">✕</span
-                ><span>Human errors reduce dataset quality</span>
-              </li>
-            </ul>
-          </div>
+            <div class="flex items-center gap-3 mb-7">
+              <span
+                class="w-10 h-10 rounded-full bg-violet-100 text-violet-500 grid place-items-center"
+              >
+                <svg
+                  class="w-4 h-4"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="m13 2-2 7h5l-7 13 2-9H6z" />
+                </svg>
+              </span>
+              <h3
+                class="text-xl font-semibold text-slate-800 dark:text-white transition-colors duration-200"
+              >
+                With Annotic
+              </h3>
+            </div>
 
-          <div
-            class="rounded-2xl border border-violet-200 dark:border-violet-500/20 bg-violet-50 dark:bg-slate-900/60 p-8 dark:shadow-[0_0_80px_rgba(109,40,217,0.25)] transition-colors duration-200"
-          >
-            <h3
-              class="text-3xl font-bold mb-8 text-black dark:text-white transition-colors duration-200"
-            >
-              With Annotic
-            </h3>
-            <ul
-              class="space-y-6 text-slate-700 dark:text-slate-300 text-2xl transition-colors duration-200"
-            >
-              <li class="flex gap-4">
-                <span class="text-violet-600 dark:text-violet-400">✓</span
-                ><span>AI detects and suggests annotations automatically</span>
+            <ul class="space-y-6">
+              <li
+                class="flex items-center gap-4 text-base leading-7 text-slate-600 dark:text-slate-300"
+              >
+                <span
+                  class="w-10 h-10 rounded-full bg-violet-100 text-violet-500 grid place-items-center shrink-0"
+                >
+                  <svg
+                    class="w-4 h-4"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M20 6 9 17l-5-5" />
+                  </svg>
+                </span>
+                <span>AI detects and suggests annotations automatically</span>
               </li>
-              <li class="flex gap-4">
-                <span class="text-violet-600 dark:text-violet-400">✓</span
-                ><span>Smart labeling with confidence scores</span>
+              <li
+                class="flex items-center gap-4 text-base leading-7 text-slate-600 dark:text-slate-300"
+              >
+                <span
+                  class="w-10 h-10 rounded-full bg-violet-100 text-violet-500 grid place-items-center shrink-0"
+                >
+                  <svg
+                    class="w-4 h-4"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <circle cx="12" cy="12" r="3" />
+                    <path
+                      d="M19.4 15a1.65 1.65 0 0 0 .33 1.82 2 2 0 1 1-2.83 2.83A1.65 1.65 0 0 0 15 19.4a1.65 1.65 0 0 0-1 1.52 2 2 0 1 1-4 0A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33 2 2 0 1 1-2.83-2.83A1.65 1.65 0 0 0 4.6 15a1.65 1.65 0 0 0-1.52-1 2 2 0 1 1 0-4A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82 2 2 0 1 1 2.83-2.83A1.65 1.65 0 0 0 9 4.6a1.65 1.65 0 0 0 1-1.52 2 2 0 1 1 4 0A1.65 1.65 0 0 0 15 4.6a1.65 1.65 0 0 0 1.82-.33 2 2 0 1 1 2.83 2.83A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.52 1 2 2 0 1 1 0 4A1.65 1.65 0 0 0 19.4 15z"
+                    />
+                  </svg>
+                </span>
+                <span>Smart labeling with confidence scores</span>
               </li>
-              <li class="flex gap-4">
-                <span class="text-violet-600 dark:text-violet-400">✓</span
-                ><span>Batch approve to save hours of work</span>
+              <li
+                class="flex items-center gap-4 text-base leading-7 text-slate-600 dark:text-slate-300"
+              >
+                <span
+                  class="w-10 h-10 rounded-full bg-violet-100 text-violet-500 grid place-items-center shrink-0"
+                >
+                  <svg
+                    class="w-4 h-4"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M12 5v14" />
+                    <path d="M5 12h14" />
+                  </svg>
+                </span>
+                <span>Batch approve to save hours of work</span>
               </li>
             </ul>
-          </div>
+          </article>
+
+          <article
+            class="rounded-2xl border border-slate-200 bg-[#f9fafb] p-8 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-red-300 hover:shadow-[0_16px_38px_rgba(248,113,113,0.18)] dark:border-slate-800 dark:bg-slate-900/60 dark:hover:border-red-500/40 dark:hover:shadow-[0_18px_44px_rgba(248,113,113,0.22)]"
+          >
+            <div class="flex items-center gap-3 mb-7">
+              <span
+                class="w-10 h-10 rounded-full bg-red-100 text-red-400 grid place-items-center"
+              >
+                <svg
+                  class="w-4 h-4"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="m15 9-6 6" />
+                  <path d="m9 9 6 6" />
+                </svg>
+              </span>
+              <h3
+                class="text-xl font-semibold text-slate-800 dark:text-white transition-colors duration-200"
+              >
+                Without Annotic
+              </h3>
+            </div>
+
+            <ul class="space-y-6">
+              <li
+                class="flex items-center gap-4 text-base leading-7 text-slate-600 dark:text-slate-300"
+              >
+                <span
+                  class="w-10 h-10 rounded-full bg-red-100 text-red-400 grid place-items-center shrink-0"
+                >
+                  <svg
+                    class="w-4 h-4"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <circle cx="12" cy="12" r="9" />
+                    <path d="M12 8v5" />
+                    <circle cx="12" cy="16" r="1" />
+                  </svg>
+                </span>
+                <span>Manual annotation is painfully slow</span>
+              </li>
+              <li
+                class="flex items-center gap-4 text-base leading-7 text-slate-600 dark:text-slate-300"
+              >
+                <span
+                  class="w-10 h-10 rounded-full bg-red-100 text-red-400 grid place-items-center shrink-0"
+                >
+                  <svg
+                    class="w-4 h-4"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path
+                      d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"
+                    />
+                    <path d="M12 9v4" />
+                    <path d="M12 17h.01" />
+                  </svg>
+                </span>
+                <span>Repetitive tasks drain productivity</span>
+              </li>
+              <li
+                class="flex items-center gap-4 text-base leading-7 text-slate-600 dark:text-slate-300"
+              >
+                <span
+                  class="w-10 h-10 rounded-full bg-red-100 text-red-400 grid place-items-center shrink-0"
+                >
+                  <svg
+                    class="w-4 h-4"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <circle cx="12" cy="12" r="9" />
+                    <path d="m9 9 6 6" />
+                    <path d="m15 9-6 6" />
+                  </svg>
+                </span>
+                <span>Human errors reduce dataset quality</span>
+              </li>
+            </ul>
+          </article>
         </div>
       </div>
     </section>
