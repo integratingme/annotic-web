@@ -31,9 +31,10 @@ onMounted(() => {
       class="max-w-7xl mx-auto h-[70px] px-6 flex items-center justify-between"
     >
       <div class="flex items-center gap-3">
-        <img src="/logo.png" alt="Annotic logo" class="h-8 w-auto mr-2" />
+        <img src="/logo.png" alt="Annotic logo" class="h-10 w-auto" />
+
         <span
-          class="text-3xl leading-none font-semibold tracking-tight text-slate-900 dark:text-white transition-colors duration-200"
+          class="text-[22px] md:text-[24px] font-bold bg-gradient-to-r from-[#7C5CFF] via-[#6D8CFF] to-[#4FD1FF] bg-clip-text text-transparent"
           >Annotic</span
         >
       </div>

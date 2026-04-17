@@ -14,7 +14,7 @@ if (import.meta.client) {
 </script>
 <template>
   <div
-    class="min-h-screen bg-white text-black dark:bg-[#0b0f1a] dark:text-white [font-family:Inter,ui-sans-serif,system-ui,sans-serif] transition-colors duration-200"
+    class="min-h-screen bg-white text-black dark:bg-[#0b0f1a] dark:text-white transition-colors duration-200"
   >
     <div class="pointer-events-none fixed inset-0 -z-10"></div>
     <Navbar />

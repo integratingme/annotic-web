@@ -28,7 +28,7 @@
 
         <article class="text-center relative z-10">
           <div
-            class="relative w-16 h-16 mx-auto rounded-2xl border border-slate-300 bg-slate-100 shadow-[0_8px_20px_rgba(15,23,42,0.08)] flex items-center justify-center dark:bg-[#0B1120] dark:border-gray-800 dark:shadow-[0_0_20px_rgba(34,211,238,0.15)] transition-colors duration-200"
+            class="relative mx-auto w-16 h-16 flex items-center justify-center rounded-xl bg-[#0B1220] border border-white/10 transition-all duration-300 hover:border-purple-500/60 hover:shadow-[0_0_40px_rgba(124,92,255,0.35)] hover:-translate-y-1"
           >
             <svg
               class="w-7 h-7 text-cyan-400"
@@ -62,7 +62,7 @@
 
         <article class="text-center relative z-10">
           <div
-            class="relative w-16 h-16 mx-auto rounded-2xl border border-slate-300 bg-slate-100 shadow-[0_8px_20px_rgba(15,23,42,0.08)] flex items-center justify-center dark:bg-[#0B1120] dark:border-gray-800 dark:shadow-[0_0_20px_rgba(34,211,238,0.15)] transition-colors duration-200"
+            class="relative mx-auto w-16 h-16 flex items-center justify-center rounded-xl bg-[#0B1220] border border-white/10 transition-all duration-300 hover:border-purple-500/60 hover:shadow-[0_0_40px_rgba(124,92,255,0.35)] hover:-translate-y-1"
           >
             <svg
               class="w-7 h-7 text-cyan-400"
@@ -97,7 +97,7 @@
 
         <article class="text-center relative z-10">
           <div
-            class="relative w-16 h-16 mx-auto rounded-2xl border border-slate-300 bg-slate-100 shadow-[0_8px_20px_rgba(15,23,42,0.08)] flex items-center justify-center dark:bg-[#0B1120] dark:border-gray-800 dark:shadow-[0_0_20px_rgba(34,211,238,0.15)] transition-colors duration-200"
+            class="relative mx-auto w-16 h-16 flex items-center justify-center rounded-xl bg-[#0B1220] border border-white/10 transition-all duration-300 hover:border-purple-500/60 hover:shadow-[0_0_40px_rgba(124,92,255,0.35)] hover:-translate-y-1"
           >
             <svg
               class="w-7 h-7 text-cyan-400"
@@ -136,7 +136,7 @@
 
         <article class="text-center relative z-10">
           <div
-            class="relative w-16 h-16 mx-auto rounded-2xl border border-slate-300 bg-slate-100 shadow-[0_8px_20px_rgba(15,23,42,0.08)] flex items-center justify-center dark:bg-[#0B1120] dark:border-gray-800 dark:shadow-[0_0_20px_rgba(34,211,238,0.15)] transition-colors duration-200"
+            class="relative mx-auto w-16 h-16 flex items-center justify-center rounded-xl bg-[#0B1220] border border-white/10 transition-all duration-300 hover:border-purple-500/60 hover:shadow-[0_0_40px_rgba(124,92,255,0.35)] hover:-translate-y-1"
           >
             <svg
               class="w-7 h-7 text-cyan-400"
