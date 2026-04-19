@@ -6,6 +6,21 @@ import PreviewDemo from "./PreviewDemo.vue";
 const isDark = ref(false);
 let themeObserver: MutationObserver | null = null;
 
+const scrollToSection = (sectionId: string) => {
+  const target = document.getElementById(sectionId);
+
+  if (target) {
+    target.scrollIntoView({ behavior: "smooth" });
+    return;
+  }
+
+  window.location.href = "/";
+};
+
+const scrollToTop = () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
+
 onMounted(() => {
   const syncTheme = () => {
     isDark.value = document.documentElement.classList.contains("dark");
@@ -61,7 +76,7 @@ onUnmounted(() => {
       <div class="max-w-5xl mx-auto">
         <div class="text-center mb-14">
           <h2
-            class="[font-family:Inter,ui-sans-serif,system-ui,sans-serif] text-[32px] md:text-[40px] lg:text-[56px] font-bold tracking-[-0.02em] leading-[1.1] text-center text-white mb-3 transition-colors duration-200"
+            class="[font-family:Inter,ui-sans-serif,system-ui,sans-serif] text-[32px] md:text-[40px] lg:text-[56px] font-bold tracking-[-0.02em] leading-[1.1] text-center text-gray-900 dark:text-white mb-3 transition-colors duration-200"
           >
             Built for
             <span
@@ -78,96 +93,96 @@ onUnmounted(() => {
 
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-6">
           <article
-            class="lg:col-span-2 bg-[#0B1220] border border-white/10 rounded-xl p-6 transition-all duration-300 hover:border-purple-500/60 hover:shadow-[0_20px_50px_rgba(124,92,255,0.25)] hover:-translate-y-1"
+            class="lg:col-span-2 bg-white border border-gray-200 rounded-xl p-6 transition-all duration-300 hover:border-purple-400 hover:shadow-md hover:-translate-y-1 dark:bg-[#0B1220] dark:border-white/10 dark:hover:border-purple-500/60 dark:hover:shadow-[0_20px_50px_rgba(124,92,255,0.25)]"
           >
             <div
-              class="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center mb-4"
+              class="w-12 h-12 flex items-center justify-center rounded-lg bg-gray-100 text-cyan-600 mb-4 dark:bg-cyan-500/10 dark:text-cyan-400"
             >
               <Factory class="w-6 h-6 text-cyan-400" />
             </div>
             <h3
-              class="text-lg font-bold text-slate-900 dark:text-white transition-colors duration-200"
+              class="text-gray-900 font-semibold dark:text-white transition-colors duration-200"
             >
               Manufacturing
             </h3>
             <p
-              class="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400 transition-colors duration-200"
+              class="mt-3 text-gray-500 text-sm dark:text-gray-400 transition-colors duration-200"
             >
               Defect detection and quality control.
             </p>
           </article>
           <article
-            class="lg:col-span-2 bg-[#0B1220] border border-white/10 rounded-xl p-6 transition-all duration-300 hover:border-purple-500/60 hover:shadow-[0_20px_50px_rgba(124,92,255,0.25)] hover:-translate-y-1"
+            class="lg:col-span-2 bg-white border border-gray-200 rounded-xl p-6 transition-all duration-300 hover:border-purple-400 hover:shadow-md hover:-translate-y-1 dark:bg-[#0B1220] dark:border-white/10 dark:hover:border-purple-500/60 dark:hover:shadow-[0_20px_50px_rgba(124,92,255,0.25)]"
           >
             <div
-              class="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center mb-4"
+              class="w-12 h-12 flex items-center justify-center rounded-lg bg-gray-100 text-cyan-600 mb-4 dark:bg-cyan-500/10 dark:text-cyan-400"
             >
               <HeartPulse class="w-6 h-6 text-cyan-400" />
             </div>
             <h3
-              class="text-lg font-bold text-slate-900 dark:text-white transition-colors duration-200"
+              class="text-gray-900 font-semibold dark:text-white transition-colors duration-200"
             >
               Medical Imaging
             </h3>
             <p
-              class="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400 transition-colors duration-200"
+              class="mt-3 text-gray-500 text-sm dark:text-gray-400 transition-colors duration-200"
             >
               Annotate X-rays, MRIs, and pathology slides.
             </p>
           </article>
           <article
-            class="lg:col-span-2 bg-[#0B1220] border border-white/10 rounded-xl p-6 transition-all duration-300 hover:border-purple-500/60 hover:shadow-[0_20px_50px_rgba(124,92,255,0.25)] hover:-translate-y-1"
+            class="lg:col-span-2 bg-white border border-gray-200 rounded-xl p-6 transition-all duration-300 hover:border-purple-400 hover:shadow-md hover:-translate-y-1 dark:bg-[#0B1220] dark:border-white/10 dark:hover:border-purple-500/60 dark:hover:shadow-[0_20px_50px_rgba(124,92,255,0.25)]"
           >
             <div
-              class="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center mb-4"
+              class="w-12 h-12 flex items-center justify-center rounded-lg bg-gray-100 text-cyan-600 mb-4 dark:bg-cyan-500/10 dark:text-cyan-400"
             >
               <Car class="w-6 h-6 text-cyan-400" />
             </div>
             <h3
-              class="text-lg font-bold text-slate-900 dark:text-white transition-colors duration-200"
+              class="text-gray-900 font-semibold dark:text-white transition-colors duration-200"
             >
               Autonomous Driving
             </h3>
             <p
-              class="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400 transition-colors duration-200"
+              class="mt-3 text-gray-500 text-sm dark:text-gray-400 transition-colors duration-200"
             >
               Label roads, vehicles, and pedestrians.
             </p>
           </article>
           <article
-            class="lg:col-span-2 lg:col-start-2 bg-[#0B1220] border border-white/10 rounded-xl p-6 transition-all duration-300 hover:border-purple-500/60 hover:shadow-[0_20px_50px_rgba(124,92,255,0.25)] hover:-translate-y-1"
+            class="lg:col-span-2 lg:col-start-2 bg-white border border-gray-200 rounded-xl p-6 transition-all duration-300 hover:border-purple-400 hover:shadow-md hover:-translate-y-1 dark:bg-[#0B1220] dark:border-white/10 dark:hover:border-purple-500/60 dark:hover:shadow-[0_20px_50px_rgba(124,92,255,0.25)]"
           >
             <div
-              class="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center mb-4"
+              class="w-12 h-12 flex items-center justify-center rounded-lg bg-gray-100 text-cyan-600 mb-4 dark:bg-cyan-500/10 dark:text-cyan-400"
             >
               <Leaf class="w-6 h-6 text-cyan-400" />
             </div>
             <h3
-              class="text-lg font-bold text-slate-900 dark:text-white transition-colors duration-200"
+              class="text-gray-900 font-semibold dark:text-white transition-colors duration-200"
             >
               Agriculture
             </h3>
             <p
-              class="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400 transition-colors duration-200"
+              class="mt-3 text-gray-500 text-sm dark:text-gray-400 transition-colors duration-200"
             >
               Identify crop diseases and estimate yield.
             </p>
           </article>
           <article
-            class="lg:col-span-2 lg:col-start-4 bg-[#0B1220] border border-white/10 rounded-xl p-6 transition-all duration-300 hover:border-purple-500/60 hover:shadow-[0_20px_50px_rgba(124,92,255,0.25)] hover:-translate-y-1"
+            class="lg:col-span-2 lg:col-start-4 bg-white border border-gray-200 rounded-xl p-6 transition-all duration-300 hover:border-purple-400 hover:shadow-md hover:-translate-y-1 dark:bg-[#0B1220] dark:border-white/10 dark:hover:border-purple-500/60 dark:hover:shadow-[0_20px_50px_rgba(124,92,255,0.25)]"
           >
             <div
-              class="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center mb-4"
+              class="w-12 h-12 flex items-center justify-center rounded-lg bg-gray-100 text-cyan-600 mb-4 dark:bg-cyan-500/10 dark:text-cyan-400"
             >
               <ShoppingBag class="w-6 h-6 text-cyan-400" />
             </div>
             <h3
-              class="text-lg font-bold text-slate-900 dark:text-white transition-colors duration-200"
+              class="text-gray-900 font-semibold dark:text-white transition-colors duration-200"
             >
               Retail
             </h3>
             <p
-              class="mt-3 text-sm leading-6 text-slate-600 dark:text-slate-400 transition-colors duration-200"
+              class="mt-3 text-gray-500 text-sm dark:text-gray-400 transition-colors duration-200"
             >
               Shelf analysis and inventory tracking.
             </p>
@@ -189,7 +204,7 @@ onUnmounted(() => {
             <span
               class="bg-gradient-to-r from-violet-400 to-blue-400 bg-clip-text text-transparent"
               >Annotic</span
-            >
+            >?
           </h2>
           <p
             class="mt-4 text-slate-600 dark:text-slate-400/70 text-lg transition-colors duration-200"
@@ -200,7 +215,7 @@ onUnmounted(() => {
 
         <div class="grid md:grid-cols-2 gap-6">
           <article
-            class="rounded-2xl border border-slate-200 bg-[#f8fafc] p-7 transition-all duration-300 hover:-translate-y-1 dark:border-blue-500/10 dark:hover:border-purple-500/50 dark:bg-[#0f172a] dark:shadow-[0_0_30px_rgba(59,130,246,0.08)] dark:hover:shadow-[0_0_25px_rgba(168,85,247,0.35)]"
+            class="rounded-2xl border border-slate-200 bg-[#f8fafc] p-7 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.01] hover:border-purple-500/60 hover:shadow-[0_20px_50px_rgba(124,92,255,0.25)] dark:border-blue-500/10 dark:bg-[#0f172a] dark:shadow-[0_0_30px_rgba(59,130,246,0.08)] dark:hover:border-purple-500/60 dark:hover:shadow-[0_20px_50px_rgba(124,92,255,0.25)] dark:hover:scale-[1.01]"
           >
             <div class="flex items-start gap-4">
               <div
@@ -233,7 +248,7 @@ onUnmounted(() => {
             </div>
           </article>
           <article
-            class="rounded-2xl border border-slate-200 bg-[#f8fafc] p-7 transition-all duration-300 hover:-translate-y-1 dark:border-blue-500/10 dark:hover:border-purple-500/50 dark:bg-[#0f172a] dark:shadow-[0_0_30px_rgba(59,130,246,0.08)] dark:hover:shadow-[0_0_25px_rgba(168,85,247,0.35)]"
+            class="rounded-2xl border border-slate-200 bg-[#f8fafc] p-7 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.01] hover:border-purple-500/60 hover:shadow-[0_20px_50px_rgba(124,92,255,0.25)] dark:border-blue-500/10 dark:bg-[#0f172a] dark:shadow-[0_0_30px_rgba(59,130,246,0.08)] dark:hover:border-purple-500/60 dark:hover:shadow-[0_20px_50px_rgba(124,92,255,0.25)] dark:hover:scale-[1.01]"
           >
             <div class="flex items-start gap-4">
               <div
@@ -271,7 +286,7 @@ onUnmounted(() => {
             </div>
           </article>
           <article
-            class="rounded-2xl border border-slate-200 bg-[#f8fafc] p-7 transition-all duration-300 hover:-translate-y-1 dark:border-blue-500/10 dark:hover:border-purple-500/50 dark:bg-[#0f172a] dark:shadow-[0_0_30px_rgba(59,130,246,0.08)] dark:hover:shadow-[0_0_25px_rgba(168,85,247,0.35)]"
+            class="rounded-2xl border border-slate-200 bg-[#f8fafc] p-7 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.01] hover:border-purple-500/60 hover:shadow-[0_20px_50px_rgba(124,92,255,0.25)] dark:border-blue-500/10 dark:bg-[#0f172a] dark:shadow-[0_0_30px_rgba(59,130,246,0.08)] dark:hover:border-purple-500/60 dark:hover:shadow-[0_20px_50px_rgba(124,92,255,0.25)] dark:hover:scale-[1.01]"
           >
             <div class="flex items-start gap-4">
               <div
@@ -309,7 +324,7 @@ onUnmounted(() => {
             </div>
           </article>
           <article
-            class="rounded-2xl border border-slate-200 bg-[#f8fafc] p-7 transition-all duration-300 hover:-translate-y-1 dark:border-blue-500/10 dark:hover:border-purple-500/50 dark:bg-[#0f172a] dark:shadow-[0_0_30px_rgba(59,130,246,0.08)] dark:hover:shadow-[0_0_25px_rgba(168,85,247,0.35)]"
+            class="rounded-2xl border border-slate-200 bg-[#f8fafc] p-7 transition-all duration-300 hover:-translate-y-1 hover:scale-[1.01] hover:border-purple-500/60 hover:shadow-[0_20px_50px_rgba(124,92,255,0.25)] dark:border-blue-500/10 dark:bg-[#0f172a] dark:shadow-[0_0_30px_rgba(59,130,246,0.08)] dark:hover:border-purple-500/60 dark:hover:shadow-[0_20px_50px_rgba(124,92,255,0.25)] dark:hover:scale-[1.01]"
           >
             <div class="flex items-start gap-4">
               <div
@@ -379,7 +394,7 @@ onUnmounted(() => {
 
           <div class="mt-8 flex flex-wrap justify-center gap-4">
             <button
-              class="inline-flex items-center gap-2 rounded-xl px-6 py-3 bg-gradient-to-r from-violet-500 to-blue-500 text-white font-semibold"
+              class="inline-flex items-center gap-2 rounded-xl px-6 py-3 bg-gradient-to-r from-violet-500 to-blue-500 text-white font-semibold transition-all duration-300 hover:bg-purple-600 hover:shadow-[0_14px_40px_rgba(124,92,255,0.35)] dark:hover:bg-purple-600 dark:hover:shadow-[0_14px_40px_rgba(124,92,255,0.35)]"
             >
               <svg
                 class="w-4 h-4"
@@ -435,8 +450,10 @@ onUnmounted(() => {
           >
             By
             <a
-              href="#"
-              class="text-cyan-500 hover:text-cyan-400 transition-colors duration-200"
+              href="https://integrating.me"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="cursor-pointer text-cyan-500 hover:text-cyan-400 hover:underline transition-colors duration-200"
               >Integrating.me</a
             >
           </p>
@@ -451,25 +468,41 @@ onUnmounted(() => {
           <ul
             class="space-y-3 text-base text-gray-500 dark:text-gray-400 transition-colors duration-200"
           >
-            <li
-              class="hover:text-slate-900 dark:hover:text-white transition-colors duration-200"
-            >
-              Features
+            <li>
+              <a
+                href="/"
+                @click.prevent="scrollToSection('features')"
+                class="cursor-pointer hover:text-slate-900 dark:hover:text-white hover:underline transition-colors duration-200"
+              >
+                Features
+              </a>
             </li>
-            <li
-              class="hover:text-slate-900 dark:hover:text-white transition-colors duration-200"
-            >
-              How It Works
+            <li>
+              <a
+                href="/"
+                @click.prevent="scrollToSection('how-it-works')"
+                class="cursor-pointer hover:text-slate-900 dark:hover:text-white hover:underline transition-colors duration-200"
+              >
+                How It Works
+              </a>
             </li>
-            <li
-              class="hover:text-slate-900 dark:hover:text-white transition-colors duration-200"
-            >
-              Use Cases
+            <li>
+              <a
+                href="/"
+                @click.prevent="scrollToSection('use-cases')"
+                class="cursor-pointer hover:text-slate-900 dark:hover:text-white hover:underline transition-colors duration-200"
+              >
+                Use Cases
+              </a>
             </li>
-            <li
-              class="hover:text-slate-900 dark:hover:text-white transition-colors duration-200"
-            >
-              Download
+            <li>
+              <a
+                href="/"
+                @click.prevent="scrollToTop"
+                class="cursor-pointer hover:text-slate-900 dark:hover:text-white hover:underline transition-colors duration-200"
+              >
+                Download
+              </a>
             </li>
           </ul>
         </div>
@@ -513,12 +546,16 @@ onUnmounted(() => {
             Contact
           </h4>
           <p
-            class="flex items-center gap-2 text-base text-gray-500 dark:text-gray-400 transition-colors duration-200"
+            class="flex items-center gap-0.5 text-base text-gray-500 dark:text-gray-400 transition-colors duration-200"
           >
-            <span aria-hidden="true">✉</span>
+            <span
+              class="inline-flex h-9 w-9 items-center justify-center text-3xl leading-none shrink-0"
+              aria-hidden="true"
+              >✉</span
+            >
             <a
               href="mailto:contact@annotic.app"
-              class="hover:text-slate-900 dark:hover:text-white transition-colors duration-200"
+              class="translate-y-px hover:text-slate-900 dark:hover:text-white transition-colors duration-200"
               >contact@annotic.app</a
             >
           </p>

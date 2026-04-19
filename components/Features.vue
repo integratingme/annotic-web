@@ -170,30 +170,30 @@ import {
 
         <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
           <article
-            class="bg-[#0B1220] border border-white/10 rounded-xl p-6 transition-all duration-300 hover:border-purple-500/60 hover:shadow-[0_20px_50px_rgba(124,92,255,0.25)] hover:-translate-y-1"
+            class="bg-white border border-gray-200 rounded-xl p-6 transition-all duration-300 hover:border-purple-400 hover:shadow-md hover:-translate-y-1 dark:bg-[#0B1220] dark:border-white/10 dark:hover:border-purple-500/60 dark:hover:shadow-[0_20px_50px_rgba(124,92,255,0.25)]"
           >
             <div
-              class="w-12 h-12 rounded-xl bg-purple-500/10 grid place-items-center shrink-0"
+              class="w-12 h-12 flex items-center justify-center rounded-lg bg-gray-100 text-cyan-600 mb-4 dark:bg-purple-500/10 dark:text-purple-400"
             >
               <Brain class="w-6 h-6 text-purple-400" stroke-width="1.9" />
             </div>
             <h3
-              class="mt-5 text-xl font-semibold text-slate-900 dark:text-white tracking-tight transition-colors duration-200"
+              class="mt-5 text-gray-900 font-semibold dark:text-white transition-colors duration-200"
             >
               AI-Assisted Annotation
             </h3>
             <p
-              class="mt-3 text-sm leading-6 text-slate-600 dark:text-gray-400 transition-colors duration-200"
+              class="mt-3 text-gray-500 text-sm dark:text-gray-400 transition-colors duration-200"
             >
               Detect similar objects, suggest labels, and batch approve
               annotations.
             </p>
           </article>
           <article
-            class="bg-[#0B1220] border border-white/10 rounded-xl p-6 transition-all duration-300 hover:border-purple-500/60 hover:shadow-[0_20px_50px_rgba(124,92,255,0.25)] hover:-translate-y-1"
+            class="bg-white border border-gray-200 rounded-xl p-6 transition-all duration-300 hover:border-purple-400 hover:shadow-md hover:-translate-y-1 dark:bg-[#0B1220] dark:border-white/10 dark:hover:border-purple-500/60 dark:hover:shadow-[0_20px_50px_rgba(124,92,255,0.25)]"
           >
             <div
-              class="w-12 h-12 rounded-xl bg-purple-500/10 grid place-items-center shrink-0"
+              class="w-12 h-12 flex items-center justify-center rounded-lg bg-gray-100 text-cyan-600 mb-4 dark:bg-purple-500/10 dark:text-purple-400"
             >
               <LayoutDashboard
                 class="w-6 h-6 text-purple-400"
@@ -201,50 +201,50 @@ import {
               />
             </div>
             <h3
-              class="mt-5 text-xl font-semibold text-slate-900 dark:text-white tracking-tight transition-colors duration-200"
+              class="mt-5 text-gray-900 font-semibold dark:text-white transition-colors duration-200"
             >
               Smart Workflow
             </h3>
             <p
-              class="mt-3 text-sm leading-6 text-slate-600 dark:text-gray-400 transition-colors duration-200"
+              class="mt-3 text-gray-500 text-sm dark:text-gray-400 transition-colors duration-200"
             >
               Single-window interface with fast navigation and shortcuts.
             </p>
           </article>
           <article
-            class="bg-[#0B1220] border border-white/10 rounded-xl p-6 transition-all duration-300 hover:border-purple-500/60 hover:shadow-[0_20px_50px_rgba(124,92,255,0.25)] hover:-translate-y-1"
+            class="bg-white border border-gray-200 rounded-xl p-6 transition-all duration-300 hover:border-purple-400 hover:shadow-md hover:-translate-y-1 dark:bg-[#0B1220] dark:border-white/10 dark:hover:border-purple-500/60 dark:hover:shadow-[0_20px_50px_rgba(124,92,255,0.25)]"
           >
             <div
-              class="w-12 h-12 rounded-xl bg-purple-500/10 grid place-items-center shrink-0"
+              class="w-12 h-12 flex items-center justify-center rounded-lg bg-gray-100 text-cyan-600 mb-4 dark:bg-purple-500/10 dark:text-purple-400"
             >
               <FileCheck class="w-6 h-6 text-purple-400" stroke-width="1.9" />
             </div>
             <h3
-              class="mt-5 text-xl font-semibold text-slate-900 dark:text-white tracking-tight transition-colors duration-200"
+              class="mt-5 text-gray-900 font-semibold dark:text-white transition-colors duration-200"
             >
               Dataset Ready
             </h3>
             <p
-              class="mt-3 text-sm leading-6 text-slate-600 dark:text-gray-400 transition-colors duration-200"
+              class="mt-3 text-gray-500 text-sm dark:text-gray-400 transition-colors duration-200"
             >
               Export in YOLO, JSON, or Pascal VOC formats instantly.
             </p>
           </article>
           <article
-            class="bg-[#0B1220] border border-white/10 rounded-xl p-6 transition-all duration-300 hover:border-purple-500/60 hover:shadow-[0_20px_50px_rgba(124,92,255,0.25)] hover:-translate-y-1"
+            class="bg-white border border-gray-200 rounded-xl p-6 transition-all duration-300 hover:border-purple-400 hover:shadow-md hover:-translate-y-1 dark:bg-[#0B1220] dark:border-white/10 dark:hover:border-purple-500/60 dark:hover:shadow-[0_20px_50px_rgba(124,92,255,0.25)]"
           >
             <div
-              class="w-12 h-12 rounded-xl bg-purple-500/10 grid place-items-center shrink-0"
+              class="w-12 h-12 flex items-center justify-center rounded-lg bg-gray-100 text-cyan-600 mb-4 dark:bg-purple-500/10 dark:text-purple-400"
             >
               <Microscope class="w-6 h-6 text-purple-400" stroke-width="1.9" />
             </div>
             <h3
-              class="mt-5 text-xl font-semibold text-slate-900 dark:text-white tracking-tight transition-colors duration-200"
+              class="mt-5 text-gray-900 font-semibold dark:text-white transition-colors duration-200"
             >
               AI Post-Processing
             </h3>
             <p
-              class="mt-3 text-sm leading-6 text-slate-600 dark:text-gray-400 transition-colors duration-200"
+              class="mt-3 text-gray-500 text-sm dark:text-gray-400 transition-colors duration-200"
             >
               Cleanup, patch extraction, and duplicate detection.
             </p>
